@@ -8,7 +8,8 @@ with open('eval2.txt', 'r') as grade2:
 dict = {}
     #print(len(names), len(grades1), len(grades2)) --> 47
 avarage = 0
-for student in range(len(names)):
+x = len(names)
+for student in range(x):
     dict[str(names[student])] = int(grades1[student]) + int(grades2[student])
     avarage = avarage + int(grades1[student]) + int(grades2[student])
 
@@ -20,4 +21,3 @@ print("And the students with grades under the avarage are: ")
 for student in dict:
     if dict[student] < avarage:
         print(student, dict[student])
-
